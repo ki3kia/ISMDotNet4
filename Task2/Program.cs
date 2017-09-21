@@ -11,7 +11,7 @@ namespace Task2
         static void Main(string[] args)
         {
             int m, n, min, max;
-            bool f;
+            bool f; 
             do
             {
                 Console.WriteLine("Введите количество строк: ");
