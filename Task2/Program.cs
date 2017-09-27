@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibrary1;
 
 namespace Task2
 {
@@ -43,14 +44,7 @@ namespace Task2
                 }
                 Console.WriteLine();
             }
-            for (int i=0; i<matr1.GetLength(0); i++)
-            {
-                for (int j=0; j< matr1.GetLength(0); j++)
-                {
-                    Console.Write($"{matr1[i, j],4}");
-                }
-                Console.WriteLine();
-            }
+            Matrix.Sum(matr1);
         }
     }
 }

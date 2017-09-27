@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibrary1;
 
 namespace Task1
 {
@@ -15,17 +16,17 @@ namespace Task1
             bool f;
             do
             {
-                Console.WriteLine("Введите количество");
+                Console.WriteLine("Введите количество строк");
                 f = int.TryParse(Console.ReadLine(), out n);
             } while (f == false);
             do
             {
-                Console.WriteLine("");
+                Console.WriteLine("Введите количество столбцов");
                 f = int.TryParse(Console.ReadLine(), out m);
             } while (f == false);
             do
             {
-                Console.WriteLine("");
+                Console.WriteLine("Введите диапазон чисел");
                 f = int.TryParse(Console.ReadLine(), out min);
             } while (f == false);
             do
@@ -58,19 +59,7 @@ namespace Task1
                 Console.WriteLine();
             }
             Console.WriteLine("Result matrix");
-            for (int i = 0; i < matr3.GetLength(0); i++)
-            {
-                for (int j = 0; j < matr3.GetLength(1); j++)
-                {
-                    for (int q=0; q<n-1; q++)
-                    {
-                        matr3[i, j] += matr1[i, q] * matr2[q, j];
-                    }
-                    Console.WriteLine($"{matr3[i, j],4}");
-                }
-                Console.WriteLine();
-
-            }
+            Matrix.ProductMatrix(matr1, matr2);
         }
     }
 }

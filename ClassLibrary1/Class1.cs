@@ -48,5 +48,20 @@ namespace ClassLibrary1
                 z++;
             }
          }
+        public static int PositineDiagonal(int[,] integers)
+        {
+            int k = 0;
+            int x = 1;
+            for (int i = 0; i < integers.GetLength(0); i++)
+            {
+                for (int j = 0; j < integers.GetLength(1); j++)
+                {
+                    if (integers[i, j] > 0)
+                        k = k + 1;
+                }
+                x++;
+            }
+            return k;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibrary1;
 
 namespace Task3
 {
@@ -44,27 +45,10 @@ namespace Task3
                 Console.WriteLine();
             }
             int k = 0;
-            int x = 1;
-            for (int i=0; i < matr1.GetLength(0); i++)
-            {
-                for (int j=0; j< matr1.GetLength(1); j++)
-                {
-                    if (matr1[i, j] > 0)
-                        k = k + 1;
-                }
-                x++;
-            }
+            k = Matrix.PositineDiagonal(matr1);
             Console.WriteLine($"Количество положительных чесел выше диагонали: {k}");
-            int s = 0, z = 0;
-            for (int i = 0; i < matr1.GetLength(0); i++)
-            {
-                for (int j = 0; j < matr1.GetLength(1); j++)
-                {
-                    s = s + matr1[i, j];
-                    Console.WriteLine(s);
-                }
-                z++;
-            }
+            int s = 0;
+            Matrix.SumDiagonal(matr1);
             Console.WriteLine($"Сумма чисел ниже диагонали: {s}");
         }
     }
